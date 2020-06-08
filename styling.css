@@ -1,0 +1,294 @@
+/* INDEX PAGE */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.titlecontainer{
+    display:flex;
+    justify-content:space-between;
+    border: 2px solid #8FBC8F;
+    background-color: #8FBC8F;
+
+}
+
+.title{
+    font-family: "Lucida Console", Monaco, monospace;
+     margin: 0 auto;
+    font-size:25px;
+    padding: 15px; 
+}
+
+input[type=text]{
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size:15px;
+    margin: 10px;
+    border: 1.5px solid green;
+    border-radius: 10px;
+    width: 200px;
+}
+
+
+body {
+    font-family: "Lucida Console", Monaco, monospace;
+    line-height: 1.4; 
+ }
+​
+.showcase {
+  max-width: 960 px;
+  margin: auto;
+}
+
+.backgroundimage {
+background-image: url("ourcarbonfootprint.jpg");
+    background-size: cover;
+    position:fixed; left:0px;
+    width: 1300px;
+    height: 680px;
+  
+    
+}
+
+.calculate {
+  position:relative;
+  display:inline-block;
+  padding: 15px 30px;
+  border:2px solid #111;
+  color: #111;
+  text-decoration: none;
+  font-weight:600;
+  font-size: 20px;
+}
+  
+  /* z-index: 4;
+  
+  position:fixed; left: 300px; top: 400px;
+  background-color: white; */
+
+.calculate:before{
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: calc(100% + 4px);  
+  height: calc(100% - 12px);
+  background: #fff ;
+  transition: 0.5s ease-in-out;
+  transform: scaleY(1);
+  transition-delay: 0.3s;
+} 
+
+.calculate:hover:before{
+  transform: scaleY(0);
+}
+
+
+.calculate:after {
+content: '';
+position: absolute;
+left: 6px;
+top: -2px;
+height: calc(100% + 2px);  
+width: calc(100% - 12px);
+background: #fff ;
+transition: 0.5s ease-in-out;
+transform: scaleX(1);
+transition-delay: 0.3s;
+}
+
+.calculate:hover:before{
+  transform: scaleX(0);
+}
+.calculate div {
+  position: relative;
+  z-index: 3;
+}
+  
+
+
+
+/*
+.showcase .backgroundimage a:after{
+content: '';
+position: absolute;
+left: 6px;
+top: -2px;
+height: calc(100% + 4px);
+width: calc(100% - 12px);
+background: #8fbc8b;
+transition: 0.3s ease-in-out;
+transform: scaleX(1);
+} */
+
+/* .calculate :hover:after{
+transform:scaleX(0);
+} 
+
+.calculate {
+position:relative;
+z-index: 4;
+border:2px solid #111;
+font-weight:600;
+font-size: 20px;
+display:inline-block;
+padding: 15px 30px;
+position:fixed; left: 300px; top: 400px;
+background-color: white;
+text-decoration: none;
+
+} */
+
+
+/* INFORMATION PAGE */
+.leftside, .rightside {
+  height: 100vh;
+  font-family: "Lucida Console", Monaco, monospace;
+  color: black;
+  display: flex;
+  font-size: 15px;
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+}
+.leftside {
+  background: #fff8e0;
+  flex-direction: column;
+  padding: 5%;
+}
+  
+.rightside {
+  background: #fff8e0;
+  padding: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* WHAT CAN WE DO PAGE - animation for circle image */
+
+.imagecircle img {
+    animation: rotation 20s infinite linear;
+    transform-origin: 50% 50%;
+    max-height: 350px;
+    max-width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    margin-top: 0px;
+    
+   
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+
+  /* WHAT CAN WE DO PAGE splitting page into 3 columns (2 text and image) and fade in text */
+
+  .column {
+      animation: fadeIn ease 7s;
+      -webkit-animation: fadeIn ease 7s;
+      -moz-animation: fadeIn ease 7s;
+      -o-animation: fadeIn ease 7s;
+      -ms-animation: fadeIn ease 7s;
+      
+    }
+
+    .row {
+      display: inline-flex;
+      padding-top: 50px;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    /* WHAT CAN WE DO PAGE col-4 - Means column with width size for 4. Modern web design principles describes web pages as being made of 12 equally sizedcolumns.
+  So a column with size 4 indicates a third of the page.
+  Display, as flex. This means that each div will space it self next to each other versus below on the page.
+  Width, the percentage which is the 1/3 of the page.
+  */
+
+    .col-4 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 33%;
+      
+    }
+
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+/* WHAT CAN WE DO PAGE Space between points */
+
+p {
+    padding: 10px;
+   
+}
